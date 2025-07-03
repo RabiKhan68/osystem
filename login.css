@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    background: black;
+    font-family: "Courier New", monospace;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000;
+    text-align: center;
+}
+
+input[type='password'] {
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Courier New", monospace;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button {
+    font-family: "Courier New", monospace;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: limegreen;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+h2 {
+    color: black;
+}

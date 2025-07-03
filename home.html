@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Screen</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+   <!-- Desktop Icons -->
+  <div class="desktop-icon" style="top: 50px; left: 30px;" onclick="openWindow('fileExplorer')">
+    <img src="folder.jpg" alt="File Explorer">
+    <div>File Explorer</div>
+  </div>
+
+  <div class="desktop-icon" style="top: 150px; left: 30px;" onclick="openWindow('notepad')">
+    <img src="note.jpg" alt="Notepad">
+    <div>Notepad</div>
+  </div>
+
+  <div class="desktop-icon" style="top: 250px; left: 30px;" onclick="openWindow('recycleBin')">
+    <img src="trash.webp" alt="Recycle Bin">
+    <div>Recycle Bin</div>
+  </div>
+
+  <div class="desktop-icon" style="top: 350px; left: 30px;" onclick="openWindow('2DBallgame')" id = "2d">
+    <img src="ball.jpg" alt="Ball game">
+    <div>2D Ball game</div>
+  </div>
+
+  <div class="desktop-icon" style="top: 450px; left: 30px;" onclick="openWindow('Browser')" id = "browser">
+    <img src="browser.jpg" alt="Browser">
+    <div>Browser</div>
+  </div>
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <button class="start-button" onclick="toggleStartMenu()">Start</button>
+    <div class="clock" id="clock"></div>
+  </div>
+
+  <!-- Start Menu -->
+  <div class="start-menu" id="startMenu">
+    <button onclick="openWindow('notepad')">Notepad</button>
+    <button onclick="openWindow('fileExplorer')">File Explorer</button>
+    <button onclick="openWindow('recycleBin')">Recycle Bin</button>
+    <button onclick="restartOS()">Restart</button>
+    <button onclick="shutdownOS()">Shutdown</button>
+  </div>
+
+  <!-- Windows -->
+  <div class="window" id="notepad">
+    <div class="window-header" onmousedown="startDrag(event, this.parentElement)">
+      Notepad
+      <button class="close-btn" onclick="closeWindow('notepad')">&times;</button>
+    </div>
+    <div class="window-content">
+      <textarea style="width: 100%; height: 100%;"></textarea>
+    </div>
+  </div>
+
+  <div class="window" id="fileExplorer">
+    <div class="window-header" onmousedown="startDrag(event, this.parentElement)">
+      File Explorer
+      <button class="close-btn" onclick="closeWindow('fileExplorer')">&times;</button>
+    </div>
+    <div class="window-content">
+      <p>This is your fake file system.</p>
+    </div>
+  </div>
+
+  <div class="window" id="recycleBin">
+    <div class="window-header" onmousedown="startDrag(event, this.parentElement)">
+      Recycle Bin
+      <button class="close-btn" onclick="closeWindow('recycleBin')">&times;</button>
+    </div>
+    <div class="window-content">
+      <p>The recycle bin is empty.</p>
+    </div>
+  </div>
+
+  <!-- Shutdown Screen -->
+  <div class="shutdown-screen" id="shutdownScreen">Shutting down...</div>
+
+
+    <script src = "home.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: limegreen;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    padding: 20px;
+}
+
+#boot-screen {
+    white-space: pre-line;
+}
